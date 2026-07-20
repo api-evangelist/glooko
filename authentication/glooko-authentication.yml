@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.glooko.com/
+docs:
+- https://developers.glooko.com/
+- https://glooko.com/partners/
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+  standards:
+  - SMART on FHIR
+  - OAuth 2.0
+schemes:
+- name: SMARTonFHIR
+  type: oauth2
+  scheme: SMART on FHIR (OAuth 2.0)
+  flow: authorizationCode
+  description: >-
+    Glooko's EHR integration program uses SMART on FHIR, which layers OAuth 2.0
+    authorization-code flow over HL7 FHIR for EHR-launched and standalone
+    healthcare applications. Access is partner-gated: integration credentials are
+    provisioned through the Glooko API and EHR Integration Portal
+    (developers.glooko.com) rather than self-serve signup.
+  sources:
+  - https://glooko.com/partners/
+notes: >-
+  No public OpenAPI/Swagger specification is published (developers.glooko.com is a
+  partner-gated single-page app), so this profile is derived from Glooko's
+  documented SMART on FHIR / OAuth 2.0 integration model rather than a
+  machine-readable securityScheme.
