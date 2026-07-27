@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+result: none
+notes: >-
+  No genuine /.well-known/ discovery documents were found. glooko.com returns 404
+  for security.txt, openid-configuration, and api-catalog. developers.glooko.com
+  is a single-page app that returns its index.html (HTTP 200, Content-Type
+  text/html) for every path, so the 200s on security.txt and ai-plugin.json are
+  SPA fallbacks, not real documents. No file saved; no WellKnown/SecurityTxt
+  pointer wired.
+hosts:
+- host: https://glooko.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://developers.glooko.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    real: false
+    content_type: text/html
+    note: SPA index.html fallback, not RFC 9116.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    real: false
+    content_type: text/html
+    note: SPA index.html fallback, not a real ai-plugin manifest.
+- host: https://api.glooko.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 404
