@@ -1,0 +1,22 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://aws.amazon.com/marketplace/
+marketplace_apps: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=6e4afe7e-bbec-4347-a34f-ffecc49e1275
+  listing_count: 2
+  apps:
+  - Glooko Diabetes Management Platform
+  - EndoTool Glucose Management System from Monarch Medical Technologies
+  seller_name: Glooko, Inc.
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
